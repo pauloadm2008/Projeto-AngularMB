@@ -10,7 +10,7 @@ import { AboutComponent } from './components/pages/about/about.component';
 import { HomeComponent } from './components/pages/home/home.component';
 import { NewMomentComponent } from './components/pages/new-moment/new-moment.component';
 import { MomentFormComponent } from './components/moment-form/moment-form.component';
-
+import { CommonModule } from '@angular/common'; 
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +26,9 @@ import { MomentFormComponent } from './components/moment-form/moment-form.compon
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CommonModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
