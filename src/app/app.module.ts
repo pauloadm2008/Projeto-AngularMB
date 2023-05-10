@@ -10,7 +10,10 @@ import { AboutComponent } from './components/pages/about/about.component';
 import { HomeComponent } from './components/pages/home/home.component';
 import { NewMomentComponent } from './components/pages/new-moment/new-moment.component';
 import { MomentFormComponent } from './components/moment-form/moment-form.component';
-import { CommonModule } from '@angular/common'; 
+import { CommonModule } from '@angular/common';
+import { MessagesComponent } from './components/messages/messages.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'; 
+import { MessagesService } from './service/messages.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +22,9 @@ import { CommonModule } from '@angular/common';
     AboutComponent,
     HomeComponent,
     NewMomentComponent,
-    MomentFormComponent
+    MomentFormComponent,
+    MessagesComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -28,6 +33,7 @@ import { CommonModule } from '@angular/common';
     FormsModule,
     ReactiveFormsModule,
     CommonModule,
+    FontAwesomeModule,
     
   ],
   providers: [],
