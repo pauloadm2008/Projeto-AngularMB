@@ -14,6 +14,7 @@ import { CommonModule } from '@angular/common';
 import { MessagesComponent } from './components/messages/messages.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'; 
 import { MessagesService } from './service/messages.service';
+import { MomentComponent } from './components/pages/moment/moment.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,6 +25,7 @@ import { MessagesService } from './service/messages.service';
     NewMomentComponent,
     MomentFormComponent,
     MessagesComponent,
+    MomentComponent,
     
   ],
   imports: [

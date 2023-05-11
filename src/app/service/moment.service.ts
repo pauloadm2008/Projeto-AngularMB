@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Moment } from '../Moment';
 import { environment } from 'src/assets/environment';
+/*import { Response } from '../Response';*/
 @Injectable({
   providedIn: 'root'
 })
@@ -12,9 +13,12 @@ export class MomentService {
 
   constructor(private http: HttpClient) {}
 
+  
+
   createMoment(formData: FormData): Observable<FormData> {
     return this.http.post<FormData>(this.apiUrl, formData);
   }
 
+  /*getMoments(): Observable<>*/
 
 }
