@@ -4,7 +4,7 @@ import { MomentService } from 'src/app/service/moment.service';
 
 import { Moment } from 'src/app/Moment';
 
-import { environment } from 'src/assets/environment';
+import { environment } from 'src/enviroments/environment';
 
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
@@ -25,16 +25,16 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.momentService.getMoments().subscribe((items) => {
-      const data = items.data;
+      const data = items;
 
-      data.map((item) => {
+      data.map((item: any) => {
         item.created_at = new Date(item.created_at!).toLocaleDateString(
           'pt-BR'
         );
       });
 
-      this.allMoments = items.data;
-      this.moments = items.data;
+      this.allMoments = items;
+      this.moments = items;
     });
   }
 

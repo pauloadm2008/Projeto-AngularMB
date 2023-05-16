@@ -7,7 +7,6 @@ import { Moment } from 'src/app/Moment';
 import { MomentService } from 'src/app/service/moment.service';
 import { MessagesService } from 'src/app/service/messages.service';
 
-
 @Component({
   selector: 'app-edit-moment',
   templateUrl: './edit-moment.component.html',
@@ -28,7 +27,7 @@ export class EditMomentComponent implements OnInit {
     const id = Number(this.route.snapshot.paramMap.get('id'));
 
     this.momentService.getMoment(id).subscribe((item) => {
-      this.moment = item.data;
+      this.moment = item;
     });
   }
 
@@ -37,8 +36,8 @@ export class EditMomentComponent implements OnInit {
 
     const formData = new FormData();
 
-    formData.append('title',momentData.title);
-    formData.append('description',momentData.description);
+    formData.append('title', momentData.title);
+    formData.append('description', momentData.description);
 
     if (momentData.image) {
       formData.append('image', momentData.image);
